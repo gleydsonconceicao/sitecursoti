@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+</head>
+<body>
+  
+
+ <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Cadastro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="cursos.html">Cursos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="institucional.html">Institucional</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+<div class="container">
+    <h2 class="text-success">Cadastro Novo Aluno</h2>
+
+    <form>
+      <fieldset class="border p-2">
+        <div class="row">
+        <div class="form-group col-lg-6 col-md-12">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group col-lg-6 col-md-12">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-lg-6 col-md-12">
+            <label for="curso">Curso</label>
+            <input type="text" class="form-control" id="curso" placeholder="Digite o Curso">
+        </div>
+
+        <div class="form-group col-lg-6 col-md-12">
+            <label for="horario">Horário:</label>
+            <select id="horario" class="form-select" aria-label="Default select example">
+                <option selected value="0">Selecione o Horário do curso</option>
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+              </select>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <button onclick="btnSalvar(event)" type="submit" onsubmit="enviarFormulario(event)" class="btn btn-primary px-5">Enviar</button>
+      </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <div>
+    <table class="table table table-hover mt-3">
+        <thead class="table-info">
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Curso</th>
+            <th scope="col">Horário</th>
+            <th>Excluir</th>
+          </tr>
+        </thead>
+        <tbody id="adicionar-linha">
+          
+        </tbody>
+      </table>
+  </div>
+
+  <footer class="footer fixed-bottom bg-dark text-light py-3 mt-4">
+    <div class="container text-center">
+      <span>&copy; 2023 Cursos Web TI. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+</body>
+</html>
